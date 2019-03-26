@@ -1,0 +1,18 @@
+{% load i18n %}
+
+<div class="chat-wrapper">
+	<h3> {% trans 'Chat' %} </h3>
+    <div>
+        <form method="POST" action="{% url 'chat' %}">
+            {% csrf_token %}
+            {{ chatform.as_ul }}
+            <input type="submit" value="{% trans 'Send message' %}" />
+            <input type="hidden" name="redirect_uri" value="{{ request.get_raw_uri }}" />
+        </form>
+    </div>
+    {% for chat in chats %}
+    <div class="msg-wrapper">
+		<div class="date">{{ chat.date }}: {{ chat.msg }}</div>
+    </div>
+    {% endfor %}
+</div>

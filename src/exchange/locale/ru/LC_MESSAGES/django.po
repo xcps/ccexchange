@@ -1,0 +1,332 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-17 10:55+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: exchange/forms.py:11
+msgid "Payout address"
+msgstr "Адрес выплаты"
+
+#: exchange/forms.py:34
+msgid "Enter a message"
+msgstr "Введите сообщение"
+
+#: exchange/forms.py:53
+msgid "Seems like a flood, wait for a while"
+msgstr "Похоже на флуд, подождите немного"
+
+#: exchange/models.py:22
+msgid "Name"
+msgstr "Имя"
+
+#: exchange/models.py:23
+msgid "Symbol"
+msgstr "Алиас"
+
+#: exchange/models.py:26
+msgid "RPC url"
+msgstr ""
+
+#: exchange/models.py:27
+msgid "In the form of http://127.0.0.1:9376"
+msgstr "В виде http://127.0.0.1:9376"
+
+#: exchange/models.py:29
+msgid "RPC username"
+msgstr "RPC юзернейм"
+
+#: exchange/models.py:31
+msgid "RPC password"
+msgstr "RPC пароль"
+
+#: exchange/models.py:34
+msgid "Wallet passphrase"
+msgstr "Кодовая фраза кошелька"
+
+#: exchange/models.py:35
+#: exchange/templates/exchange/exchangetransaction_detail.html:10
+msgid "Info"
+msgstr "Информация"
+
+#: exchange/models.py:93
+msgid "Coin daemon"
+msgstr "Койн-сервис"
+
+#: exchange/models.py:94
+msgid "Coin daemons"
+msgstr "Койн-сервисы"
+
+#: exchange/models.py:99 exchange/models.py:118
+msgid "Coin"
+msgstr "Койн"
+
+#: exchange/models.py:101
+msgid "Balance"
+msgstr "Баланс"
+
+#: exchange/models.py:103 exchange/models.py:183 exchange/models.py:202
+#: exchange/models.py:355
+msgid "Date"
+msgstr "Дата"
+
+#: exchange/models.py:110
+msgid "Coin balance"
+msgstr "Баланс на кошельке"
+
+#: exchange/models.py:111
+msgid "Coin balances"
+msgstr "Балансы на кошельках"
+
+#: exchange/models.py:116
+msgid "Address"
+msgstr "Адрес"
+
+#: exchange/models.py:131
+msgid "Coin address in"
+msgstr "Койн-адрес вход"
+
+#: exchange/models.py:132
+msgid "Coin addresses in"
+msgstr "Койн-адреса вход"
+
+#: exchange/models.py:139
+msgid "Coin address out"
+msgstr "Койн-адрес выход"
+
+#: exchange/models.py:140
+msgid "Coin addresses out"
+msgstr "Койн-адреса выход"
+
+#: exchange/models.py:146
+msgid "Coin from"
+msgstr "Из койнов"
+
+#: exchange/models.py:149
+msgid "Coin to"
+msgstr "В койны"
+
+#: exchange/models.py:151
+msgid "Enabled"
+msgstr "Включено"
+
+#: exchange/models.py:172 exchange/models.py:178 exchange/models.py:197
+#: exchange/models.py:235
+msgid "Pair"
+msgstr "Пара"
+
+#: exchange/models.py:173
+msgid "Pairs"
+msgstr "Пары"
+
+#: exchange/models.py:181 exchange/models.py:191 exchange/models.py:200
+#: exchange/models.py:253
+msgid "Rate"
+msgstr "Рейт"
+
+#: exchange/models.py:192
+msgid "Rates"
+msgstr "Рейты"
+
+#: exchange/models.py:204
+msgid "Source"
+msgstr "Источник"
+
+#: exchange/models.py:227
+msgid "Waiting for payment"
+msgstr "Ожидание платежа"
+
+#: exchange/models.py:228
+msgid "Payment received"
+msgstr "Платеж получен"
+
+#: exchange/models.py:229
+msgid "No balance to send payment"
+msgstr "Не хватает баланса, чтобы отправить платеж"
+
+#: exchange/models.py:230
+msgid "Waiting for wallet"
+msgstr "Ожидание кошелька"
+
+#: exchange/models.py:231
+msgid "Transaction complete"
+msgstr "Транзакция выполнена"
+
+#: exchange/models.py:238
+msgid "Pay in address"
+msgstr "Адрес платежа"
+
+#: exchange/models.py:242
+msgid "Pay out address"
+msgstr "Адрес выплаты"
+
+#: exchange/models.py:246
+msgid "Coins received"
+msgstr "Койнов получено"
+
+#: exchange/models.py:250
+msgid "Coins sent"
+msgstr "Койнов отправлено"
+
+#: exchange/models.py:255
+msgid "Commission"
+msgstr "Комиссия"
+
+#: exchange/models.py:258
+#: exchange/templates/exchange/exchangetransaction_detail.html:17
+msgid "Status"
+msgstr "Статус"
+
+#: exchange/models.py:268
+msgid "Confirmations"
+msgstr "Подтверждения"
+
+#: exchange/models.py:343
+msgid "Exchange transaction"
+msgstr "Обменная транзакция"
+
+#: exchange/models.py:344
+msgid "Exchange transactions"
+msgstr "Обменные транзакции"
+
+#: exchange/models.py:351
+msgid "Transaction"
+msgstr "Транзакция"
+
+#: exchange/models.py:352
+msgid "Message"
+msgstr "Сообщение"
+
+#: exchange/templates/base.html:80
+msgid "blocks"
+msgstr "блоков"
+
+#: exchange/templates/base.html:81
+msgid "difficulty"
+msgstr "сложность"
+
+#: exchange/templates/base.html:82
+msgid "networkhashpersec"
+msgstr "хешрейт сети"
+
+#: exchange/templates/base.html:83
+msgid "connections"
+msgstr "узлов подсоединено"
+
+#: exchange/templates/chat.html:4
+msgid "Chat"
+msgstr "Чат"
+
+#: exchange/templates/chat.html:9
+msgid "Send message"
+msgstr "Отправить сообщение"
+
+#: exchange/templates/exchange/exchangetransaction_detail.html:12
+#: exchange/templates/exchange/transact_templates/waiting_for_payment.html:4
+msgid "to"
+msgstr "на"
+
+#: exchange/templates/exchange/exchangetransaction_detail.html:12
+msgid "current rate"
+msgstr "текущий курс"
+
+#: exchange/templates/exchange/transact_templates/payment_received.html:4
+msgid "Received"
+msgstr "Получено"
+
+#: exchange/templates/exchange/transact_templates/payment_received.html:4
+msgid "Waiting for confirmations"
+msgstr "Ожидание подтверждений"
+
+#: exchange/templates/exchange/transact_templates/payment_received.html:4
+msgid "of"
+msgstr "из"
+
+#: exchange/templates/exchange/transact_templates/payment_received.html:6
+#: exchange/templates/exchange/transact_templates/waiting_for_payment.html:6
+msgid "You will get"
+msgstr "Вы получите"
+
+#: exchange/templates/exchange/transact_templates/payment_received.html:6
+#: exchange/templates/exchange/transact_templates/waiting_for_payment.html:6
+msgid "to your payout address"
+msgstr "на ваш адрес выплаты"
+
+#: exchange/templates/exchange/transact_templates/payment_received.html:8
+msgid "Final rate will be calculated right after 6 network confirmations"
+msgstr "Окончательный курс будет расчитан сразу после 6 подтверждений сети"
+
+#: exchange/templates/exchange/transact_templates/payment_received.html:10
+#: exchange/templates/exchange/transact_templates/waiting_for_payment.html:8
+msgid "rates and maximum sum can change according to market"
+msgstr "курсы и максимальная сумма может меняться согласно рынку"
+
+#: exchange/templates/exchange/transact_templates/transaction_complete.html:4
+msgid "Transaction complete!"
+msgstr "Транзакция прошла успешно!"
+
+#: exchange/templates/exchange/transact_templates/transaction_complete.html:4
+msgid "rate"
+msgstr "курс"
+
+#: exchange/templates/exchange/transact_templates/transaction_complete.html:6
+msgid "have been sent to your payout address"
+msgstr "были отправлены на ваш адрес выплаты"
+
+#: exchange/templates/exchange/transact_templates/waiting_for_payment.html:4
+msgid "Send"
+msgstr "Отправьте"
+
+#: exchange/templates/exchange/transact_templates/waiting_for_payment.html:4
+msgid "max:"
+msgstr "максимум:"
+
+#: exchange/templates/index.html:13
+msgid "Exchange"
+msgstr "Обменять"
+
+#: exchange/templates/index.html:29
+msgid "Recent transactions"
+msgstr "Последние транзакции"
+
+#: exchange/views.py:27
+msgid "Cryptocoin exchanger"
+msgstr "криптовалютный обменник"
+
+#: exchange/views.py:28
+msgid "cryptocurrency exchanger"
+msgstr "криптовалютный обменник"
+
+#~ msgid "moneysupply"
+#~ msgstr "койнов намайнено"
+
+#~ msgid "You will get exchanged coins to your payout address"
+#~ msgstr "Вы получите обменяные койны на ваш кошелек выплаты"
+
+#~ msgid "Description"
+#~ msgstr "Описание"
+
+#~ msgid "Url"
+#~ msgstr "Юрл"
+
+#~ msgid "Send your coins to"
+#~ msgstr "Отправьте койны на"
+
+#~ msgid "NOT MORE THAN"
+#~ msgstr "НЕ БОЛЬШЕ"

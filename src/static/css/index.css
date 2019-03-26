@@ -1,0 +1,40 @@
+
+.transaction-form {
+	overflow: hidden;
+}
+
+
+.transaction-form ul.form>li {
+	margin-right: 1em;
+	margin-top: 1em;
+}
+
+.transaction-form ul.form>li #id_payout_raw_address {
+}
+
+ul {
+	list-style-type: none;
+    padding-left: 0;
+}
+
+ul.errorlist {
+    position: absolute;
+    bottom: 100%;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0.7em;
+    color: red;
+}
+
+ul.recents a {
+	transition: all .1s;
+	color: darkcyan;
+}
+
+ul.recents a:hover {
+	color: darkgoldenrod;
+}
+
+.form {
+    overflow: hidden;
+}

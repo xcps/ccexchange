@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% load exchange_extras %}
+
+{% block content %}
+<div class="inline">
+    <div class="transaction-form">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <ul class="form">
+                {{ form.as_ul }}
+                <li> <input value="{% trans 'Exchange' %}" type="submit"> </li>
+            </ul>
+
+        </form>
+    </div>
+
+    <div class="rates-wrapper">
+        <ul class="rates">
+        {% for pair in pairs %}
+            <li> 1 {{ pair.coin_from.symbol }} --> {{ pair.get_rate }} {{ pair.coin_to.symbol }} </li>
+        {% endfor %}
+        </ul>
+    </div>
+
+	{% if recents %}
+    <div class="recents-wrapper">
+        <h3> {% trans 'Recent transactions' %}: </h3>
+        <table class="recents">
+        {% for recent in recents %}
+            <tr>
+                {% comment %}<td class="text-right">
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'transaction' recent.slug %}">
+                    {% endif %}
+                    {{ recent.coins_received }}
+                    {% if request.user.is_authenticated %}
+                    </a>
+                    {% endif %}
+                </td>{% endcomment %}
+                <td> 
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'transaction' recent.slug %}">
+                    {% endif %}
+                    {{ recent.pair.coin_from.symbol }} </td>
+                    {% if request.user.is_authenticated %}
+                    </a>
+                    {% endif %}
+
+                <td> --> </td>
+                {% comment %}<td class="text-right"> {{ recent.coins_sent }} </td>{% endcomment %}
+                <td> {{ recent.pair.coin_to.symbol }} </td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+    {% endif %}
+</div>
+{% include 'chat.html' %}
+
+{% endblock%}
+
+{% block css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static "css/index.css" %}">
+<link rel="stylesheet" href="{% static "css/chat.css" %}">
+{% endblock %}

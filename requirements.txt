@@ -1,0 +1,12 @@
+django==1.11
+django-compressor==2.1.1
+django-debug-toolbar==1.7
+sorl-thumbnail==12.3
+celery==4.0.2
+django-celery-results==1.0.1
+django-celery-beat==1.0.1
+psycopg2==2.7.7
+simplejson
+requests[socks]
+uWSGI==2.0.15
+kombu==4.1.0

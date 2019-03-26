@@ -1,0 +1,97 @@
+{% load static %}
+{% load thumbnail %}
+{% load i18n %}
+{% load compress %}
+
+<html>
+    <head>
+        <title> {% block title %}{% trans site_settings.title %}{% endblock %} </title>
+
+    {% compress css %}
+    {% block css %}
+        <link rel="stylesheet" href="{% static "css/base.css" %}">
+    {% endblock %}
+    {% endcompress css %}
+    </head>
+    <body>
+        {% if messages %}
+        <div id="messages">
+        {% for message in messages %}
+            <div> {{ message }} </div>
+        {% endfor %}
+        </div>
+        {% endif %}
+        <div id="page-wrapper">
+
+            <div id="header-wrapper">
+            {% block header %}
+
+        {% if site_settings.logo %}
+        {% thumbnail site_settings.logo "150x100" as im %}
+                <div class="logo-wrapper">
+                    <a href="/"><img class="logo" src="{% static im.url %}"></a>
+                </div>
+        {% endthumbnail %}
+        {% endif %}
+
+                <h1 align="center">
+        {% block header_text %}
+
+            {% if site_settings.header|length %}
+                 {{ site_settings.header }}
+            {% endif %}
+
+        {% endblock %}
+                </h1>
+
+                <div class="top-right-wrapper">
+                    <div class="toplinks-wrapper vert-center toplinks">
+                    {% block toplinks %}
+                    {% endblock toplinks %}
+                    </div>
+                {% endblock %}
+
+                    <div class="language-change vert-center">
+                        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}" />
+                            <select name="language">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                                        {% trans language.name_local %} ({{ language.code }})
+                                    </option>
+                                {% endfor %}
+                            </select>
+                            <input type="submit" value="Go" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="content-wrapper"> {% block content %} {% endblock %} </div>
+        </div>
+        <div id="footer-wrapper">
+            {% block footer %}
+            {% if coins %}
+            <div class="supported-wrapper">
+                <ul class="supporteds">
+                {% for c in coins %}
+                    <li> {{ c.name }}: ({% trans 'blocks' %} - {{ c.info.blocks|default:"N/A" }},
+                        {% trans 'difficulty' %} - {{ c.info.difficulty|default:"N/A" }},
+                        {% trans 'networkhashpersec' %} - {{ c.info.networkhashps|default:"N/A" }},
+                        {% trans 'connections' %} - {{ c.info.connections|default:"N/A" }})
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            {% endblock %}
+        </div>
+
+    </body>
+    {% compress js %}
+    {% block js %}
+    {% endblock js %}
+    {% endcompress js %}
+</html>

@@ -1,0 +1,11 @@
+{% load i18n %}
+<br>
+<div>
+	{% trans 'Received' %} {{ received }} {{ object.pair.coin_from.symbol }}. {% trans 'Waiting for confirmations' %} ({{ object.confirmations }} {% trans 'of' %} 6).
+	<br><br>
+	{% trans 'You will get' %} {{ object.pair.coin_to.symbol }} {% trans 'to your payout address' %}: {{ object.out_address.address }}
+	<br><br>
+	{% trans 'Final rate will be calculated right after 6 network confirmations' %}.
+	<br>
+	({% trans 'rates and maximum sum can change according to market' %})
+</div>

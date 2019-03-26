@@ -1,0 +1,6 @@
+{% load i18n %}
+<br>
+<div>
+	{% trans 'Transaction complete!' %} {{ object.coins_received }} {{ object.pair.coin_from.symbol }} --> {{ object.coins_sent }} {{ object.pair.coin_to.symbol }} ({% trans 'rate' %}: {{ object.rate }})
+</div>
+<div>{{ object.coins_sent }} {{ object.pair.coin_to.symbol }} {% trans 'have been sent to your payout address' %}: {{ object.out_address.address }}</div>

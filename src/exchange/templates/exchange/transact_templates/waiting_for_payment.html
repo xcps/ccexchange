@@ -1,0 +1,9 @@
+{% load i18n %}
+<br>
+<div>
+	{% trans 'Send' %} {{ object.pair.coin_from.symbol }} {% trans 'to' %} <b>{{ object.in_address.address }}</b> {% trans 'max:' %} {{ object.pair.not_more_than }} {{ object.pair.coin_from.symbol }}
+	<br><br>
+	{% trans 'You will get' %} {{ object.pair.coin_to.symbol }} {% trans 'to your payout address' %}: {{ object.out_address.address }}
+	<br>
+	({% trans 'rates and maximum sum can change according to market' %})
+</div>

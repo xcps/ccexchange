@@ -1,0 +1,2 @@
+celery -A app worker -l info -S django
+celery -A app beat -l info -S django

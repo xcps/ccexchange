@@ -1,0 +1,22 @@
+.chat-wrapper {
+	font-size: small;
+	display: inline-block;
+	max-width: 35em;
+}
+
+.msg-wrapper {
+    margin: 1em 0;
+}
+
+.msg-wrapper:nth-child(even) {
+	background-color: #fff;
+}
+
+.chat-wrapper form li {
+    float: left;
+    list-style-type: none;
+}
+
+.chat-wrapper form input[type="submit"] {
+	margin-left: .5em;
+}

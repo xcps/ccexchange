@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load exchange_extras %}
+{% load static %}
+
+{% block content %}
+
+<div class="transaction-wrapper">
+        <div class="info">
+        	<h3> {% trans 'Info' %} </h3>
+                <div>
+                        {{ object.pair.coin_from.name }} {% trans 'to' %} {{ object.pair.coin_to.name }}  ({% trans 'current rate' %}:  1 {{ object.pair.coin_from.symbol }} --> {{ object.pair.get_rate }} {{ object.pair.coin_to.symbol }} )
+                </div>
+        	{% include info_template %}
+        </div>
+        <div class="status">
+        	<h4>{% trans 'Status' %}</h4>
+        	<div>{{ object.status|get_status_verbose }}</div>
+        	{% if request.user.is_authenticated and object.is_failed %}
+        	<div>Error: {{ object.error_message}}</div>
+        	{% endif%}
+        </div>
+</div>
+
+{% include 'chat.html' %}
+
+{% endblock%}
+
+
+{% block css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static "css/chat.css" %}">
+{% endblock %}
